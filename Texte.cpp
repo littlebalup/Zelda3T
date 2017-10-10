@@ -551,7 +551,7 @@ void Texte::chercheText() {
             || gpJeu->getJoueur()->getTroc(M_PARFUM)<1) idsuiv=75;
             break;
         case 266 : texte = "Les bottes de Pégase contre une tapisserie et un parfum ?*              oui              NON ?"; idsuiv=76; break;
-        case 267 : texte = "Tu as obtenu les bottes de Pégase ! *Maintiens Shift ou appuie sur Capslock pour courir !"; break;
+        case 267 : texte = "Tu as obtenu les bottes de Pégase ! *Maintiens R pour courir !"; break;
         case 268 : 
             texte = "Un parfum contre 3 plumes et 4 sacs de riz ? **              OUI ?            non  "; 
             if (gpJeu->getJoueur()->getTroc(M_PLUME)<3
@@ -638,7 +638,7 @@ void Texte::chercheText() {
         case 313 : texte = "Tu as troqué la clochette contre une hache!"; break;
         case 314 : texte = "Ho! Ho! Ho!"; buffer="C'est bien gentil, mais comment je rentre moi ?"; break;
         case 315 : texte = "TUTORIEL :*Un choc sur une de ces sphères de couleur permute les obstacles levés."; break;
-        case 316 : texte = "Tu as trouvé une épée !!!*Sert-en avec la touche W (ou Z), ou maintiens W (ou Z) enfoncé pour charger une attaque tornade!"; break;
+        case 316 : texte = "Tu as trouvé une épée !!!*Sert-en avec la touche Carré, ou maintiens Carré enfoncé pour charger une attaque tornade!"; break;
         case 317 : texte = "TUTORIEL :*Tomber dans un trou permet de descendre au niveau inférieur, cependant, s'il n'y a pas de niveau inférieur tel que c'est le cas ici, une chute fait perdre de la vie et renvoie à l'entrée de la zone. Prudence donc!"; break;
         case 318 : texte = "TUTORIEL :*Au cours du jeu, vous pourriez être amené à rencontrer des zones apparemment inaccessibles comme la plate-forme en bas. Vous aurez alors"; buffer="besoin de revenir plus tard dans le jeu avec un équipement plus fournit pour y accéder."; break;
         case 319 : texte = "@+@+@+@+@+@+@@@+*@=++=@=+@=+@=+=@*+@+@+@+=+="; break;
@@ -777,7 +777,7 @@ void Texte::chercheText() {
         case 387 : texte = "Le détecteur pour 20 gemmes de force, ok ?**              OUI ?            non  ";
             if (gpJeu->getJoueur()->getGemme()<20) idsuiv=385; break;
         case 388 : texte = "Le détecteur pour 20 gemmes de force, ok ?**              oui              NON ?"; break;
-        case 389 : texte = "Tu as obtenu le détecteur !*Lorsque tu appuies sur Entrée, le nombre de gemmes en ta possession sera écrit en vert si tu les as toutes dans la zone."; break;
+        case 389 : texte = "Tu as obtenu le détecteur !*Lorsque tu appuies sur Croix, le nombre de gemmes en ta possession sera écrit en vert si tu les as toutes dans la zone."; break;
         case 390 : 
             if (gpJeu->getJoueur()->hasBouteille(0)) {id=393; chercheText(); break;}
             texte = "Une bouteille vide pour 10 gemmes de force ?**              OUI ?            non  ";
@@ -874,7 +874,7 @@ void Texte::chercheText() {
         case 440 : texte = "Je pourrais toujours réparer le levier, mais j'ai besoin d'une pièce de rechange, et je ne peux pas quitter mon poste..."; idsuiv=441; break;
         case 441 : texte = "J'ai besoin d'un rouage, on en trouve sur la place du marché de la cité d'Hyrule."; idsuiv=442; break;
         case 442 : texte = "Tu connais le principe, non ? Chaque marchand te propose des marchandises contre d'autres, tu dois réunir ce qu'ils veulent pour obtenir ce que tu veux."; idsuiv=443; break;
-        case 443 : texte = "Je vais te donner les marchandises que j'ai.*Si tu veux consulter ce que tu as déjà, appuie sur I."; break;
+        case 443 : texte = "Je vais te donner les marchandises que j'ai.*Si tu veux consulter ce que tu as déjà, appuie sur D-Pad gauche."; break;
         case 444 : 
             if (gpJeu->getJoueur()->getTroc(M_ROUAGE)==0) {id=446; chercheText();break;}
             if (gpJeu->getJoueur()->getTroc(M_ROUAGE)>0) {id=445; chercheText();break;}
@@ -1917,7 +1917,7 @@ void Texte::chercheText() {
             texte = "La Princesse vous a chargé d'enquêter sur le vol de l'Ocarina ? *Dans ce cas vous pouvez entrer, il n'y a de toute façon plus rien à garder ici..."; break;
         case 1023: texte = "Je suis resté à garder cette porte toute la nuit. Je suis certain que personne n'a franchi cette porte..."; break;
         case 1024: texte = "C'est ici qu'était gardé l'Ocarina. Le garde a entendu un grand bruit. Le temps qu'il réalise que cela venait de la chambre forte, le coffre avait été vidé."; idsuiv=1025; break;
-        case 1025: texte = "Si tu vois quelque chose de louche, mets-toi devant et appuie sur ESPACE pour me le signaler."; break;
+        case 1025: texte = "Si tu vois quelque chose de louche, mets-toi devant et appuie sur Cercle pour me le signaler."; break;
         case 1026: texte = "C'est une torche... Tu aurais préféré un lustre au plafond ?"; break;
         case 1027: texte = "Ce coffre contenait l'Ocarina du Temps hier soir encore..."; break;
         case 1028: 
