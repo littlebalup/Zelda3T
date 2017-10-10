@@ -932,7 +932,7 @@ void Texte::chercheText() {
         case 474 : texte = "Tu ne veux tout de même pas participer gratuitement ???*               si              NON ?"; idsuiv=476; break;
         case 475 : texte = "...*Voici une canne à pêche, reviens lorsque tu auras pêché 5 poissons différents."; break;
         case 476 : texte = "Va-t-en, ennemi de la pêche!"; break;
-        case 477 : texte = "Tu as obtenu une canne à pêche!*Utilise-la à un ponton, puis remonte la ligne en appuyant à nouveau sur X lorsque la ligne bouge."; break;
+        case 477 : texte = "Tu as obtenu une canne à pêche!*Utilise-la à un ponton, puis remonte la ligne en appuyant à nouveau sur Triangle lorsque la ligne bouge."; break;
         case 478 : 
             if (gpJeu->getJoueur()->hasObjet(O_POISSONS)) {id=487; chercheText();break;}
             if (gpJeu->getJoueur()->nbPoissons()>=5) {id=479; chercheText();break;}
@@ -945,7 +945,7 @@ void Texte::chercheText() {
         case 481 : texte = "J'imagine que tu vas vouloir ton prix...*Pour te récompenser d'avoir remporter le concours de pêche : *... ... ..."; idsuiv=482; break;
         case 482 : texte = "Je t'engage!"; idsuiv=483; break;
         case 483 : texte = "Il y a beaucoup d'autres espèces de poissons à Hyrule, je veux tous les répertorier par région."; idsuiv=484; break;
-        case 484 : texte = "Je te récompenserai tous les 5 nouveaux poissons pêchés.*Tu peux désormais consulter la liste des poissons pêchés en appuyant sur L"; idsuiv=485; break;
+        case 484 : texte = "Je te récompenserai tous les 5 nouveaux poissons pêchés.*Tu peux désormais consulter la liste des poissons pêchés en appuyant sur D-Pad bas"; idsuiv=485; break;
         case 485 : texte = "Avec ta canne à pêche actuelle, tu ne pourras hélas pêcher que des petits poissons..."; break;
         case 486 : texte = "N'hésite pas à pêcher partout!*Chaque poisson pêché te redonne de la vie, l'avais-tu remarqué ?"; break;
         case 487 :
@@ -1812,7 +1812,7 @@ void Texte::chercheText() {
         case 944 : texte = "Tu as trouvé la clé du boss !!!**Sers-t'en pour accéder à son repère."; break;
         case 945 : texte = "Tu as trouvé une petite clé.**Sers-t'en pour déverrouiller une porte."; break;
         case 946 : texte = "Tu as trouvé un nouveau coeur !!!**Ta vie maximale augmente d'un coeur !!!"; break;
-        case 947 : texte = "Tu as trouvé un arc !!!**Equipe-le en appuyant sur Entrée puis sert-en avec X pour attaquer à distance !"; break;
+        case 947 : texte = "Tu as trouvé un arc !!!**Equipe-le en appuyant sur Entrée puis sert-en avec Triangle pour attaquer à distance !"; break;
         case 948 : 
             if (gpJeu->getZone()==47) {id=949; chercheText();break;}
             if (gpJeu->getZone()==48) {id=950; chercheText();break;}
