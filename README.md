@@ -1,10 +1,4 @@
-# Port of Zelda Time to Triumph for PS Vita
-
-## VPK
-Latest version is available [here](https://www.ferb.fr/vita/vpks/Zelda3T.vpk)
-
-## Data (required)
-Extract the [z3t.zip](https://www.mediafire.com/file/099ap8ss9r3oqsk/z3t.zip) archive to `ux0:data/`
+# Port of Zelda Time to Triumph for PS Vita - French version
 
 ## Controls:
 
@@ -39,10 +33,10 @@ Extract the [z3t.zip](https://www.mediafire.com/file/099ap8ss9r3oqsk/z3t.zip) ar
 ## Credits:
 
 - Vincent Jouillat, for [Original game](http://www.zeldaroth.fr/us/z3t.php)
-- [Nop90](https://www.github.com/nop90/Zelda3T), for his 3D port that contains several memory leaks fixes I included in this port.
-- littlebalup, for key mapping inspiration
+- [Nop90](https://www.github.com/nop90/Zelda3T), for his 3D port that contains several memory leaks fixes that Usineur included in his port.
+- Usineur for the vita port
 
 ## Changelog:
 
-1.0:
-- First public release
+fr-01:
+- First french public release
