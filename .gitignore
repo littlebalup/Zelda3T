@@ -1,1 +1,10 @@
-*.o
+CMakeFiles
+cmake_install.cmake
+CMakeCache.txt
+Makefile
+eboot.bin
+Zelda3T
+Zelda3T.velf
+Zelda3T_fr.vpk
+Zelda3T_fr.vpk_param.sfo
+Zelda3T_fr.zip

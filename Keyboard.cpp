@@ -647,7 +647,7 @@ void Keyboard::pollKeys(Uint8* keys) {
                 gpJeu->lire();
             }
             
-            if ((keys[SDLK_p] || buttonPressed(BTN_LTRIGGER)) && (gpJoueur->hasObjet(O_CARTE) || gpJeu->isDonjon()) && 
+            if ((keys[SDLK_p] || (buttonPressed(BTN_LTRIGGER) && !buttonPressed(BTN_RTRIGGER))) && (gpJoueur->hasObjet(O_CARTE) || gpJeu->isDonjon()) && 
             (gpJeu->isDehors() || gpJeu->isDonjon())
             && !gpJeu->getStop() && gpJoueur->getVie()>0 && !tmpp) {
                 mode = 12;

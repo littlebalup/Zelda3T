@@ -112,7 +112,7 @@ void Generique::initSelection() {
     src.x = 0; src.y = 32; dst.x = 16; dst.y = 32; 
     SDL_BlitSurface(imageCadre, &src, image, &dst);
     
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 8; i++) {
         src.x = 16; src.y = 0; dst.x = 32+16*i; dst.y = 0; 
         SDL_BlitSurface(imageCadre, &src, image, &dst);
         src.x = 16; src.y = 64; dst.x = 32+16*i; dst.y = 16; 
@@ -121,11 +121,11 @@ void Generique::initSelection() {
         SDL_BlitSurface(imageCadre, &src, image, &dst);
     }
     
-    src.x = 32; src.y = 0; dst.x = 160-32; dst.y = 0; 
+    src.x = 32; src.y = 0; dst.x = 160; dst.y = 0; 
     SDL_BlitSurface(imageCadre, &src, image, &dst);
-    src.x = 32; src.y = 16; dst.x = 160-32; dst.y = 16; 
+    src.x = 32; src.y = 16; dst.x = 160; dst.y = 16; 
     SDL_BlitSurface(imageCadre, &src, image, &dst);
-    src.x = 32; src.y = 32; dst.x = 160-32; dst.y = 32; 
+    src.x = 32; src.y = 32; dst.x = 160; dst.y = 32; 
     SDL_BlitSurface(imageCadre, &src, image, &dst);
     
     cadre(16,48,288,32);
@@ -134,7 +134,7 @@ void Generique::initSelection() {
     cadre(16,192,136,32);
     cadre(168,192,136,32);
     
-    gpJeu->affiche(image, "SELECTION", 40, 16);
+    gpJeu->affiche(image, "ECRAN DE SELECTION", 40, 16);
     gpJeu->affiche(image, "1.", 44, 56);
     gpJeu->affiche(image, "2.", 44, 104);
     gpJeu->affiche(image, "3.", 44, 152);
@@ -529,7 +529,7 @@ void Generique::initAide1() {
         ligne+=16;}
     if (gpJoueur->hasObjet(O_POISSONS)) {
 #ifdef __PSP2__
-        if (ligne < 176) gpJeu->affiche(image, "Afficher la liste des poissons péchés : D-Pad bas", 24, ligne); 
+        if (ligne < 176) gpJeu->affiche(image, "Afficher les poissons péchés : D-Pad bas", 24, ligne); 
 #else
         if (ligne < 176) gpJeu->affiche(image, "See fishes : L", 24, ligne); 
 #endif
@@ -543,7 +543,7 @@ void Generique::initAide1() {
         ligne+=16;}
     if (gpJoueur->hasObjet(O_MASQUE)) {
 #ifdef __PSP2__
-        if (ligne < 176) gpJeu->affiche(image, "Transformation Oni Link : L + R", 24, ligne); 
+        if (ligne < 176) gpJeu->affiche(image, "Transformation Oni Link : R puis L", 24, ligne); 
 #else
         if (ligne < 176) gpJeu->affiche(image, "Oni Link transformation : O", 24, ligne); 
 #endif
@@ -563,7 +563,7 @@ void Generique::initAide1() {
     gpJeu->affiche(image, "Save / Quit: Esc", 24, ligne); ligne+=16;
 #endif
     
-    if (ligne >= 288) gpJeu->affiche(image, "AIDE 1/3", 40, 16);
+    if (ligne > 288) gpJeu->affiche(image, "AIDE 1/3", 40, 16);
     else gpJeu->affiche(image, "AIDE 1/2", 40, 16);
 }
 
@@ -647,7 +647,7 @@ void Generique::initAide2() {
         ligne+=16;}
     if (gpJoueur->hasObjet(O_POISSONS)) {
 #ifdef __PSP2__
-        if (ligne >= 64) gpJeu->affiche(image, "Afficher la liste des poissons péchés : D-Pad bas", 24, ligne); 
+        if (ligne >= 64) gpJeu->affiche(image, "Afficher les poissons péchés : D-Pad bas", 24, ligne); 
 #else
         if (ligne >= 64) gpJeu->affiche(image, "See fishes : L", 24, ligne); 
 #endif

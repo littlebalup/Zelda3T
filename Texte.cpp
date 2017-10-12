@@ -2411,7 +2411,7 @@ void Texte::chercheText() {
             if (gpJeu->getJoueur()->getCoffre(14,15)) {id=1334; chercheText();break;}
             if (gpJeu->getJoueur()->getCompteurEnn() >= 50 && gpJeu->getJoueur()->getCompteurType() >= 7) {id=1335; chercheText();break;}
             texte = "Elimine au moins 50 ennemis de 7 types différents et je t'ouvrirais cette porte."; break;
-        case 1342: texte = "Tu as trouvé le masque d'Oni Link !!! *Utilise 'O' pour te transformer et devenir incroyablement puissant."; break;
+        case 1342: texte = "Tu as trouvé le masque d'Oni Link !!! *Maintiens R puis L pour te transformer et devenir incroyablement puissant."; break;
         case 1343: texte = "Félicitations Link! Tu as battu chaque type d'ennemi... C'est incroyable..."; idsuiv=1344; break;
         case 1344: texte = "Je te dois énormément, veux-tu être payé maintenant ?"; idsuiv=1345; break;
         case 1345: texte = "Je vais enfin pouvoir reprendre ma vraie forme, prépare-toi à prendre cher!*Adieu, Héros d'Hyrule!"; break;

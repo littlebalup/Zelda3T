@@ -46,7 +46,7 @@ void Poissons::fond() {
     src.x = 0; src.y = 32; dst.x = 16; dst.y = 32; 
     SDL_BlitSurface(imageCadre, &src, image, &dst);
     
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 5; i++) {
         src.x = 16; src.y = 0; dst.x = 32+16*i; dst.y = 0; 
         SDL_BlitSurface(imageCadre, &src, image, &dst);
         src.x = 16; src.y = 64; dst.x = 32+16*i; dst.y = 16; 
@@ -55,11 +55,11 @@ void Poissons::fond() {
         SDL_BlitSurface(imageCadre, &src, image, &dst);
     }
     
-    src.x = 32; src.y = 0; dst.x = 112-16; dst.y = 0; 
+    src.x = 32; src.y = 0; dst.x = 112; dst.y = 0; 
     SDL_BlitSurface(imageCadre, &src, image, &dst);
-    src.x = 32; src.y = 16; dst.x = 112-16; dst.y = 16; 
+    src.x = 32; src.y = 16; dst.x = 112; dst.y = 16; 
     SDL_BlitSurface(imageCadre, &src, image, &dst);
-    src.x = 32; src.y = 32; dst.x = 112-16; dst.y = 32; 
+    src.x = 32; src.y = 32; dst.x = 112; dst.y = 32; 
     SDL_BlitSurface(imageCadre, &src, image, &dst);
     
     
@@ -80,14 +80,14 @@ void Poissons::placeCadres() {
     switch (page) {
         case 0 :
             cadre(16,48,0); cadre(64,48,88,32,0);
-            cadre(168,48,2); cadre(216,48,88,32,2);
+            cadre(168,48,2); cadre(216,48,96,32,2);
             cadre(16,96,14); cadre(64,96,88,32,14);
             cadre(16,144,22); cadre(64,144,88,32,22);
             cadre(168,144,24); cadre(216,144,88,32,24);
             break;
         case 1 :
             cadre(16,48,11); cadre(64,48,88,32,11);
-            cadre(168,48,7); cadre(216,48,88,32,7);
+            cadre(168,48,7); cadre(216,48,96,32,7);
             cadre(16,144,16); cadre(64,144,88,32,16);
             cadre(168,144,19); cadre(216,144,88,32,19);
             cadre(16,192,28); cadre(64+8,192,88,32,28);
@@ -105,7 +105,7 @@ void Poissons::placeCadres() {
             cadre(168,48,12); cadre(216,48,88,32,12);
             cadre(16,144,20); cadre(64,144,88,32,20);
             cadre(168,144,23); cadre(216,144,88,32,23);
-            cadre(16,192,29); cadre(64+8,192,88+16,32,29);
+            cadre(16,192,29); cadre(64+8,192,88,32,29);
             break;
         case 4 :
             cadre(16,48,5); cadre(64,48,88,32,5);
@@ -118,7 +118,7 @@ void Poissons::placeCadres() {
             cadre(16,48,1); cadre(64,48,88,32,1);
             cadre(168,48,6); cadre(216,48,88,32,6);
             cadre(16,144,18); cadre(64,144,88,32,18);
-            cadre(16,192,27); cadre(64+8,192,88,32,27);
+            cadre(16,192,27); cadre(64+8,192,104,32,27);
             break;
     }
 }
@@ -222,17 +222,17 @@ void Poissons::cadre(int x, int y, int w, int h, int id) {
         switch (id) {
             case 0 : gpJeu->affiche(image, "Ecrevisse", x+8, y+8); break;
             case 1 : gpJeu->affiche(image, "Eperlan", x+8, y+8); break;
-            case 2 : gpJeu->affiche(image, "Poisson-zÃ¨bre", x+8, y+8); break;
+            case 2 : gpJeu->affiche(image, "Poisson-zèbre", x+8, y+8); break;
             case 3 : gpJeu->affiche(image, "Gobie", x+8, y+8); break;
             case 4 : gpJeu->affiche(image, "Crabe", x+8, y+8); break;
             case 5 : gpJeu->affiche(image, "Pibale", x+8, y+8); break;
             case 6 : gpJeu->affiche(image, "Vairon", x+8, y+8); break;
-            case 7 : gpJeu->affiche(image, "Carassin dorÃ©", x+8, y+8); break;
+            case 7 : gpJeu->affiche(image, "Carassin doré", x+8, y+8); break;
             case 8 : gpJeu->affiche(image, "Ablette", x+8, y+8); break;
             case 9 : gpJeu->affiche(image, "Goujon", x+8, y+8); break;
             case 10 : gpJeu->affiche(image, "Loche", x+8, y+8); break;
             case 11 : gpJeu->affiche(image, "Epinoche", x+8, y+8); break;
-            case 12 : gpJeu->affiche(image, "GrÃ©mille", x+8, y+8); break;
+            case 12 : gpJeu->affiche(image, "Grémille", x+8, y+8); break;
             case 13 : gpJeu->affiche(image, "Blennie", x+8, y+8); break;
             case 14 : gpJeu->affiche(image, "Magicarpe", x+8, y+8); break;
             case 15 : gpJeu->affiche(image, "Truite", x+8, y+8); break;
