@@ -72,6 +72,9 @@ int main(int argc, char** argv) {
 #ifdef __PSP2__
     sceKernelPowerTick(SCE_KERNEL_POWER_TICK_DISABLE_AUTO_SUSPEND);
     scePowerSetArmClockFrequency(444);
+
+    sceIoMkdir("ux0:data/z3t", 0777);
+    sceIoMkdir("ux0:data/z3t/save", 0777);
 #endif
     if (argc && argv); //pour éviter un warning.....
     

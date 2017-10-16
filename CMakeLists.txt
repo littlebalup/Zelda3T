@@ -59,19 +59,29 @@ target_link_libraries(${VITA_APPNAME}
   vorbisfile
   vorbis
   ogg
+  mikmod
+  pthread
   jpeg
   png
   vita2d
   z
-  SceAppMgr_stub
   SceAudio_stub
   SceCtrl_stub
   SceDisplay_stub
   SceGxm_stub
-  SceNetCtl_stub
   ScePower_stub
   SceSysmodule_stub
 )
+
+file(GLOB_RECURSE ASSETS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} data/*)
+
+set(DATA "")
+
+FOREACH(ITEM ${ASSETS})
+  list(APPEND DATA "FILE")
+  list(APPEND DATA ${ITEM})
+  list(APPEND DATA ${ITEM})
+ENDFOREACH()
 
 # Create Vita artifacts
 vita_create_self(eboot.bin ${VITA_APPNAME} SAFE)
@@ -82,4 +92,5 @@ vita_create_vpk(${VITA_APPNAME}_fr.vpk ${VITA_TITLEID} eboot.bin
   FILE res/bg.png sce_sys/livearea/contents/bg.png
   FILE res/startup.png sce_sys/livearea/contents/startup.png
   FILE res/template.xml sce_sys/livearea/contents/template.xml
+  ${DATA}
 )

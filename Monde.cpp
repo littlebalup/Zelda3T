@@ -80,7 +80,11 @@ Monde::~Monde() {
     for (int i = 0; i < 7; i++) SDL_FreeSurface(image[i]);
     SDL_FreeSurface(imagetransit);
     SDL_FreeSurface(imagelevel);
-    for (int i = 0; i < 19; i++) SDL_FreeSurface(imageSpe[i]);
+    for (int i = 0; i < 19; i++) {
+        if (i != 8) {
+            SDL_FreeSurface(imageSpe[i]);
+        }
+    }
 }
 
 void Monde::changeZone(int newZone) {
@@ -5454,7 +5458,7 @@ void Monde::chargeMap(int zone) {
     std::ostringstream oss;
     oss << zone;
 #ifdef __PSP2__
-    std::string result = "ux0:data/z3t/data/map/carte" + oss.str() + ".map";
+    std::string result = "app0:data/map/carte" + oss.str() + ".map";
 #else
     std::string result = "data/map/carte" + oss.str() + ".map";
 #endif

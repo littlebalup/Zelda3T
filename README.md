@@ -1,5 +1,10 @@
 # Port of Zelda Time to Triumph for PS Vita - French version
 
+## VPK
+Latest version is available [here](https://github.com/littlebalup/Zelda3T/releases)
+
+Note: saves can be found in ux0:data/z3t/save directory.
+
 ## Controls:
 
 **On game selection screen / Inside inventory**
@@ -37,6 +42,16 @@
 - Usineur for the vita port
 
 ## Changelog:
-
+fr-05:
+- Merged changes made by @usineur from his v1.0 to v1.1:
+    Fix more memory leaks
+    External datas are not required anymore (about 195 Mb space gained)
+fr-04:
+- Minor fixes : https://github.com/littlebalup/Zelda3T/commit/19c6fd101b36e026a54a7f2d4a4bd80c43e4a316
+fr-03:
+- More fixes in texts (some command descriptions)
+- Fixed missed Fishes menu translation...
+fr-02:
+- Small fixes in texts (some command descriptions)
 fr-01:
 - First french public release

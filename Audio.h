@@ -30,6 +30,7 @@ class Audio {
     private :
         void loadSounds();
         void freeSounds();
+        void freeMusic();
         Mix_Chunk* getSound(const char *son);
         Mix_Music* getMusic(const char *zik);
         Mix_Music* choixMusique(int id);
