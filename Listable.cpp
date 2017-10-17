@@ -46,9 +46,6 @@ Listable* Listable::enleve(Listable* l) {
 }
 
 void Listable::setSuivant(Listable* l) {
-    if (suivant) {
-       delete suivant;
-    }
     suivant = l;
 }
 

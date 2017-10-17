@@ -34,7 +34,7 @@ Pnj::~Pnj() {
     if (suivant != NULL) {
         Pnj* pnj_ = (Pnj*)suivant;
         suivant = NULL;
-        //delete pnj_; // FIXME
+        delete pnj_;
     }
 }
 

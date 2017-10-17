@@ -777,7 +777,7 @@ void Texte::chercheText() {
         case 387 : texte = "Le détecteur pour 20 gemmes de force, ok ?**              OUI ?            non  ";
             if (gpJeu->getJoueur()->getGemme()<20) idsuiv=385; break;
         case 388 : texte = "Le détecteur pour 20 gemmes de force, ok ?**              oui              NON ?"; break;
-        case 389 : texte = "Tu as obtenu le détecteur !*Lorsque tu appuies sur Croix, le nombre de gemmes en ta possession sera écrit en vert si tu les as toutes dans la zone."; break;
+        case 389 : texte = "Tu as obtenu le détecteur !*Lorsque tu appuies sur D-Pad droit, le nombre de gemmes en ta possession sera écrit en vert si tu les as toutes dans la zone."; break;
         case 390 : 
             if (gpJeu->getJoueur()->hasBouteille(0)) {id=393; chercheText(); break;}
             texte = "Une bouteille vide pour 10 gemmes de force ?**              OUI ?            non  ";
